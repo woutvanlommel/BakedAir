@@ -15,7 +15,7 @@
         <div class="footer-legal">
             <h5>Juridisch</h5>
             <p>OxyPure is een satirisch project voor SyntraPXL. Geen echte lucht gegarandeerd.</p>
-            <p>&copy; 2026 Junior Full Stack Dev Portfolio.</p>
+            <p>&copy; <?php echo date('Y'); ?> Junior Full Stack Dev Portfolio.</p>
         </div>
     </div>
 </footer>

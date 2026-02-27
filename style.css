@@ -35,7 +35,7 @@ body {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 60px 0;
 }
 
 .text-center {
@@ -82,10 +82,9 @@ body {
 
 .nav-brand a:hover {
     color: var(--blue);
-}
-
-.nav-brand a span:hover {
-    color: var(--navy);
+    > span {
+        color: var(--navy);
+    }
 }
 
 /* Verberg checkbox voor mobiel menu */
@@ -244,4 +243,66 @@ body {
         height: calc(100vh - var(--nav-height));
         padding-top: 20px;
     }
+}
+
+/* css/sections/footer.css */
+.footer {
+    background: var(--navy);
+    color: white;
+    padding: 80px 0 40px;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-brand .nav-logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer-brand .nav-logo span {
+    color: var(--blue);
+}
+
+.footer h5 {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: var(--blue);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-legal {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+    color: #64748b;
+}
+
+.footer-legal p {
+    margin: 8px 0;
 }

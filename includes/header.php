@@ -23,6 +23,7 @@
         </div>
     </nav>
 
+
     <header class="hero" id="hero">
         <div class="container">
             <span class="badge">Nu Beschikbaar in de Cloud</span>
