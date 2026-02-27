@@ -1,22 +1,22 @@
 [
     {
         "name": "Wat doen we?",
-        "url": "../#waarom",
+        "url": "wout/#waarom",
         "is_cta": false
     },
     {
         "name": "Tiers",
-        "url": "../#collectie",
+        "url": "wout/#collectie",
         "is_cta": false
     },
     {
         "name": "Reviews",
-        "url": "../#ervaringen",
+        "url": "wout/#ervaringen",
         "is_cta": false
     },
     {
         "name": "Contact",
-        "url": "../contact.php",
+        "url": "wout/contact.php",
         "is_cta": false
     },
     {
