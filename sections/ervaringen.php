@@ -1,26 +1,27 @@
 <section id="ervaringen" class="section">
     <div class="container">
         <div class="text-center mb-50">
-            <h2>Wat onze cliënten zeggen</h2>
-            <p style="color: #64748b; max-width: 500px; margin: 0 auto;">Bewijs dat investeren in gebakken lucht de beste beslissing van uw carrière kan zijn.</p>
+            <span class="label">Klantverhalen</span>
+            <h2>Wat onze community ervaart</h2>
+            <p style="color: #64748b; max-width: 500px; margin: 0 auto;">Ontdek waarom honderden levensgenieters al kozen voor de digitale zuiverheid van OxyPure.</p>
         </div>
 
         <div class="testimonial-grid">
             <div class="testimonial">
                 <div class="stars">★★★★★</div>
-                <p>"Sinds ik de Elite Mirage gebruik, kijken mijn collega's met meer respect naar mijn laptop. Het doet niks, maar het voelt geweldig."</p>
+                <p>"Ik dacht dat ik alles al had, tot ik de Elite Mirage kocht. Mijn laptop voelt lichter en mijn vrienden zijn stikjaloers op mijn digitale eigendom."</p>
                 <cite>
-                    <span class="cite-name">Marc B.</span>
-                    <span class="cite-title">Chief Vapor Officer, TechCorp</span>
+                    <span class="cite-name">Pieter Janssens</span>
+                    <span class="cite-title">Luxe-Liefhebber</span>
                 </cite>
             </div>
 
             <div class="testimonial">
                 <div class="stars">★★★★★</div>
-                <p>"De €1 tier is de perfecte grap voor mijn vrienden die altijd over hun 'lucht' klagen. Beste euro die ik ooit heb uitgegeven."</p>
+                <p>"Eindelijk een cadeau voor mezelf dat niet opgaat of kapot gaat. De Parijse Romantiek geeft me elke keer dat ik mijn computer open een vakantiegevoel."</p>
                 <cite>
-                    <span class="cite-name">Sarah L.</span>
-                    <span class="cite-title">Lead Digital Architect</span>
+                    <span class="cite-name">Annelies De Smet</span>
+                    <span class="cite-title">Lifestyle Blogger</span>
                 </cite>
             </div>
         </div>

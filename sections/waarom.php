@@ -1,29 +1,30 @@
 <section id="waarom" class="section">
     <div class="container grid-split">
         <div class="info-content">
-            <h2>Digitale lucht is de nieuwe standaard.</h2>
-            <p>OxyPure vangt atmosferische data op de meest serene locaties ter wereld. Onze PHP-algoritmes filteren vervolgens elke bit van vervuiling, ruis en analoge instabiliteit eruit.</p>
-            <p>Het resultaat? Een downloadbaar bestand dat zo puur is, dat uw harde schijf letterlijk lichter aanvoelt.</p>
+            <span class="label">Wellness 2.0</span>
+            <h2>Uw ademhaling verdient een upgrade.</h2>
+            <p>OxyPure is ontstaan vanuit een simpel verlangen: de meest pure lucht ter wereld toegankelijk maken voor iedereen met een internetverbinding.</p>
+            <p>Onze unieke methode vangt de sfeer op van de meest rustgevende locaties en zet deze om in een downloadbaar formaat. Het is de ultieme vorm van mindfulness voor de moderne mens.</p>
 
             <ul class="feature-list">
-                <li><span class="check-icon">✓</span> <span><strong>0% Fijnstof</strong> - Puur binaire ademhaling voor uw CPU.</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>PHP-Gecertificeerd</strong> - Ambachtelijk gecodeerde zuurstof bits.</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Instant Delivery</strong> - Geen verzendtijd, direct in uw cloud.</span></li>
+                <li><span class="check-icon">✓</span> <span><strong>Gegarandeerd Zuiver</strong> - Geen fijnstof, geen geurtjes, alleen pure rust.</span></li>
+                <li><span class="check-icon">✓</span> <span><strong>Ambachtelijk Gecureerd</strong> - Elke ml is met zorg geselecteerd voor uw genot.</span></li>
+                <li><span class="check-icon">✓</span> <span><span><strong>Status Symbool</strong> - Laat zien dat u alleen genoegen neemt met het beste.</span></li>
             </ul>
         </div>
 
         <div class="info-stats">
             <div class="stat-card">
                 <h3>99.9%</h3>
-                <p>Binaire Puurheid</p>
+                <p>Gegarandeerde Puurheid</p>
             </div>
             <div class="stat-card">
-                <h3>0.0ms</h3>
-                <p>Ademhalings Latentie</p>
+                <h3>100%</h3>
+                <p>Stress-Vrij Formaat</p>
             </div>
             <div class="stat-card" style="border-left-color: var(--navy);">
                 <h3>&infin;</h3>
-                <p>Cloud Capaciteit</p>
+                <p>Grenzeloze Ervaring</p>
             </div>
         </div>
     </div>
