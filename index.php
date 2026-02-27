@@ -1,8 +1,12 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.php');
+
+
+?>
 
 <main>
 
     <?php
+    include "sections/hero.php";
     include "sections/waarom.php";
     include "sections/collectie.php";
     include "sections/ervaringen.php";

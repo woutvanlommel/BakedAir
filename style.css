@@ -1,12 +1,14 @@
 /* css/style.css */
 
-/* Imports */
+/* 1. Imports: Haal alle modulaire styles op */
+@import url("css/hero.css");
 @import url("css/waarom.css");
 @import url("css/collectie.css");
 @import url("css/ervaringen.css");
 @import url("css/footer.css");
+@import url("css/form.css");
 
-/* Globale Stijlen */
+/* 2. Globale Stijlen: Enkel wat voor de hele site geldt */
 :root {
     --blue: #00a8ff;
     --navy: #1a2a3a;
@@ -37,12 +39,11 @@ body {
 .section {
     padding: 60px 0;
 }
-
 .text-center {
     text-align: center;
 }
 
-/* --- Navigatie & Mobiel Menu --- */
+/* 3. Navigatie: Deze laten we hier staan omdat hij op elke pagina (header) staat */
 .navbar {
     position: fixed;
     top: 0;
@@ -64,23 +65,18 @@ body {
 }
 
 .nav-brand {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 800;
     text-decoration: none;
     color: var(--navy);
-}
-
-.nav-brand span {
-    color: var(--blue);
-}
-
-.nav-brand a {
-    text-decoration: none;
-    color: inherit;
     transition: 0.3s ease;
+    > span {
+        color: var(--blue);
+    }
 }
 
-.nav-brand a:hover {
+.nav-brand:hover {
+    scale: 1.2;
     color: var(--blue);
     > span {
         color: var(--navy);

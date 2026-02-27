@@ -30,7 +30,7 @@ $tiers = json_decode($jsonData, true);
                         <?php endforeach; ?>
                     </ul>
 
-                    <a href="<?php echo $tier['kofi_url']; ?>"
+                    <a href="bestellen.php?pakket=<?php echo $tier['id']; ?>"
                         class="btn-card <?php echo $tier['featured'] ? 'highlight' : ''; ?>">
                         <?php echo ($tier['price'] > 45) ? 'Word Elite' : 'Claim Moment'; ?>
                     </a>
