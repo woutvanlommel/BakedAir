@@ -1,0 +1,247 @@
+/* css/style.css */
+
+/* Imports */
+@import url("css/waarom.css");
+@import url("css/collectie.css");
+@import url("css/ervaringen.css");
+@import url("css/footer.css");
+
+/* Globale Stijlen */
+:root {
+    --blue: #00a8ff;
+    --navy: #1a2a3a;
+    --bg: #f8fbff;
+    --white: #ffffff;
+    --nav-height: 80px;
+}
+
+html {
+    scroll-padding-top: var(--nav-height);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--navy);
+    margin: 0;
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Navigatie & Mobiel Menu --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--navy);
+}
+
+.nav-brand span {
+    color: var(--blue);
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+.nav-brand a:hover {
+    color: var(--blue);
+}
+
+.nav-brand a span:hover {
+    color: var(--navy);
+}
+
+/* Verberg checkbox voor mobiel menu */
+#menu-toggle {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-cta {
+    background: var(--blue);
+    color: white !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* Mobiele Hamburger Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+/* --- Hero Sectie --- */
+.hero {
+    padding: 180px 0 100px;
+    text-align: center;
+    background: radial-gradient(circle at top, #e6f7ff 0%, #ffffff 70%);
+}
+
+.badge {
+    background: #e3f2fd;
+    color: var(--blue);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    letter-spacing: -3px;
+    margin: 24px 0;
+    line-height: 1.1;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00a8ff, #0077be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #64748b;
+    max-width: 720px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-main,
+.btn-secondary {
+    padding: 18px 36px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-main {
+    background: var(--navy);
+    color: white;
+    box-shadow: 0 10px 20px rgba(26, 42, 58, 0.15);
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    background: var(--blue);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--navy);
+    border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    border-color: var(--blue);
+    background: var(--bg);
+}
+
+/* --- Responsive Navigatie Logica --- */
+@media (max-width: 900px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: white;
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.4s ease;
+        gap: 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* Activeer menu via checkbox */
+    #menu-toggle:checked ~ .nav-flex .nav-links {
+        height: calc(100vh - var(--nav-height));
+        padding-top: 20px;
+    }
+}

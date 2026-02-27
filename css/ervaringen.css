@@ -1,0 +1,112 @@
+/* css/sections/ervaringen.css */
+#ervaringen {
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+/* Grote decoratieve quote op de achtergrond */
+#ervaringen::after {
+    content: "“";
+    position: absolute;
+    bottom: -80px;
+    right: 5%;
+    font-size: 400px;
+    color: rgba(0, 168, 255, 0.04);
+    font-family: "Inter", serif;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial {
+    background: var(--white);
+    padding: 60px 50px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(26, 42, 58, 0.04);
+    border: 1px solid rgba(0, 168, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: 0 30px 60px rgba(0, 168, 255, 0.12);
+}
+
+.stars {
+    color: #ffc107; /* Luxe goudkleur */
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.testimonial p {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    color: var(--navy);
+    font-weight: 400;
+    margin-bottom: 35px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.testimonial cite {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+}
+
+.cite-name {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+}
+
+.cite-title {
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Blauwe indicatorlijn */
+.testimonial cite::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--blue);
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.mb-50 {
+    margin-bottom: 70px;
+}
+
+.label {
+    display: inline-block;
+    background: #f0f7ff;
+    color: var(--blue);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}

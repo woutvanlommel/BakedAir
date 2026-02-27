@@ -1,0 +1,113 @@
+/* css/sections/waarom.css */
+#waarom {
+    background: var(--white);
+    overflow: hidden;
+}
+
+.grid-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.info-content h2 {
+    font-size: 3.5rem;
+    line-height: 1.05;
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+    color: var(--navy);
+}
+
+.info-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #576574;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+/* De vinkjeslijst professioneler maken */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.feature-list li strong {
+    color: var(--blue);
+}
+
+.check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 168, 255, 0.1);
+    color: var(--blue);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* De Stat-Cards met een modern glaseffect */
+.info-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 30px;
+    border-left: 6px solid var(--blue);
+    box-shadow: 0 10px 40px rgba(26, 42, 58, 0.04);
+    border-right: 1px solid #f0f4f8;
+    border-top: 1px solid #f0f4f8;
+    border-bottom: 1px solid #f0f4f8;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stat-card:hover {
+    transform: translateX(15px);
+    box-shadow: 0 20px 50px rgba(0, 168, 255, 0.1);
+    border-color: transparent;
+    border-left-width: 10px;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    background: linear-gradient(90deg, var(--navy), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-card p {
+    margin: 8px 0 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .grid-split {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
