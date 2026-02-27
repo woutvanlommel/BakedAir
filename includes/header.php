@@ -44,14 +44,25 @@
                 <?php foreach ($navItems as $item): ?>
                     <li>
                         <?php
-                        // Check of de URL een externe link is (begint met http)
                         $is_external = (strpos($item['url'], 'http') === 0);
+                        $is_anchor = (strpos($item['url'], '#') === 0);
+                        $on_home = (current_page() === 'index.php');
 
-                        // Als het een interne link is én geen anchor (#), zet de base_url er voor
-                        // Als het een anchor is (#waarom), laten we het zoals het is voor onepager-scrollen
                         $final_url = $item['url'];
-                        if (!$is_external && strpos($item['url'], '#') !== 0) {
-                            $final_url = $base_url . $item['url'];
+
+                        if (!$is_external) {
+                            if ($is_anchor) {
+                                // Als we NIET op de home zijn, moet #waarom veranderen in index.php#waarom
+                                if (!$on_home) {
+                                    $final_url = $base_url . 'index.php' . $item['url'];
+                                } else {
+                                    // Op de home zelf laten we het gewoon #waarom voor soepel scrollen
+                                    $final_url = $item['url'];
+                                }
+                            } else {
+                                // Voor gewone pagina's zoals contact.php altijd de base_url gebruiken
+                                $final_url = $base_url . $item['url'];
+                            }
                         }
                         ?>
                         <a href="<?php echo $final_url; ?>"
