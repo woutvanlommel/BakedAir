@@ -3,7 +3,9 @@
     "tagline": "Digitale lucht is de nieuwe standaard.",
     "owner": "Wout",
     "emoji": "💨",
-    "price_range": "€1 – €10",
+    "emojiurl": "💨",
+    "linkurl": "https://twitter.com/woutvanlommel",
+    "price_range": "€1 – €50",
     "accent": "#00a8ff",
     "hot": true
 }
