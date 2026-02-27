@@ -21,7 +21,7 @@
 
     <nav class="navbar">
         <div class="container nav-flex">
-            <a href="/#hero" class="nav-brand">Oxy<span>Pure</span></a>
+            <a href="<?php echo $base_url; ?>index.php/#hero" class="nav-brand">Oxy<span>Pure</span></a>
 
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>

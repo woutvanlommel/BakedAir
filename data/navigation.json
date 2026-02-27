@@ -1,17 +1,17 @@
 [
     {
         "name": "Wat doen we?",
-        "url": "#waarom",
+        "url": "index.php/#waarom",
         "is_cta": false
     },
     {
         "name": "Tiers",
-        "url": "#collectie",
+        "url": "index.php/#collectie",
         "is_cta": false
     },
     {
         "name": "Reviews",
-        "url": "#ervaringen",
+        "url": "index.php/#ervaringen",
         "is_cta": false
     },
     {
