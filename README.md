@@ -1,0 +1,3 @@
+# Million dollar Idea
+
+Selling baked air for a living - Fresh air straight out of Sillicon Valley, California. Our air is so fresh and pure, it's like taking a deep breath of the great outdoors without ever leaving your home. Perfect for those who want to experience the beauty of nature without the hassle of leaving their couch. Our air is carefully crafted and baked to perfection, ensuring that every breath you take is filled with the essence of the great outdoors. So why settle for stale, recycled air when you can have the freshest air straight from Sillicon Valley? Try our baked air today and experience the difference!

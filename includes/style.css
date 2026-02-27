@@ -1,0 +1,100 @@
+:root {
+    --primary-blue: #00a8ff;
+    --deep-blue: #0077be;
+    --soft-blue: #e6f7ff;
+    --light-bg: #f5fafd;
+    --text-dark: #2c3e50;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(180deg, #ffffff 0%, var(--soft-blue) 100%);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #d1e9f7;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--deep-blue);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 168, 255, 0.1);
+    text-align: center;
+    border: 1px solid rgba(0, 168, 255, 0.05);
+}
+
+.price {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.buy-button {
+    display: block;
+    background: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.buy-button:hover {
+    background: var(--deep-blue);
+    transform: scale(1.05);
+}
+
+.scarcity-banner {
+    background: #ffeded;
+    color: #ff4757;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.main-footer {
+    padding: 60px 0;
+    text-align: center;
+    background: white;
+    margin-top: 80px;
+}
