@@ -12,38 +12,44 @@
 <body>
 
     <?php
-    // Bepaal de basismap van het project dynamisch
-    // Dit zorgt ervoor dat /wout/ automatisch wordt meegenomen als dat nodig is
-    $base_url = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\') . '/';
 
+    $base_url = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\') . '/';
+    // Laad de navigatie data in
     $navJson = file_get_contents('data/navigation.json');
     $navItems = json_decode($navJson, true);
     ?>
 
-    <ul class="nav-links">
-        <?php foreach ($navItems as $item): ?>
-            <li>
-                <?php
-                // Check of de URL een externe link is (begint met http)
-                $is_external = (strpos($item['url'], 'http') === 0);
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="/#hero" class="nav-brand">Oxy<span>Pure</span></a>
 
-                // Als het een interne link is én geen anchor (#), zet de base_url er voor
-                // Als het een anchor is (#waarom), laten we het zoals het is voor onepager-scrollen
-                $final_url = $item['url'];
-                if (!$is_external && strpos($item['url'], '#') !== 0) {
-                    $final_url = $base_url . $item['url'];
-                }
-                ?>
-                <a href="<?php echo $final_url; ?>"
-                    class="<?php echo $item['is_cta'] ? 'nav-cta' : ''; ?>"
-                    <?php if ($is_external): ?>
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    <?php endif; ?>>
-                    <?php echo $item['name']; ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+            <ul class="nav-links">
+                <?php foreach ($navItems as $item): ?>
+                    <li>
+                        <?php
+                        // Check of de URL een externe link is (begint met http)
+                        $is_external = (strpos($item['url'], 'http') === 0);
+
+                        // Als het een interne link is én geen anchor (#), zet de base_url er voor
+                        // Als het een anchor is (#waarom), laten we het zoals het is voor onepager-scrollen
+                        $final_url = $item['url'];
+                        if (!$is_external && strpos($item['url'], '#') !== 0) {
+                            $final_url = $base_url . $item['url'];
+                        }
+                        ?>
+                        <a href="<?php echo $final_url; ?>"
+                            class="<?php echo $item['is_cta'] ? 'nav-cta' : ''; ?>"
+                            <?php if ($is_external): ?>
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            <?php endif; ?>>
+                            <?php echo $item['name']; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
     </nav>
