@@ -17,11 +17,25 @@
     // Laad de navigatie data in
     $navJson = file_get_contents('data/navigation.json');
     $navItems = json_decode($navJson, true);
+
+    // Functie om de huidige pagina te bepalen
+    function current_page()
+    {
+        return basename($_SERVER['PHP_SELF']);
+    }
     ?>
 
     <nav class="navbar">
         <div class="container nav-flex">
-            <a href="<?php echo $base_url; ?>index.php/#hero" class="nav-brand">Oxy<span>Pure</span></a>
+            <?php
+            if (current_page() === 'index.php') { ?>
+                <a href="<?php echo $base_url; ?>#hero" class="nav-brand">Oxy<span>Pure</span></a>
+            <?php } ?>
+
+            <?php
+            if (current_page() !== 'index.php') { ?>
+                <a href="<?php echo $base_url; ?>index.php" class="nav-brand">Oxy<span>Pure</span></a>
+            <?php } ?>
 
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
