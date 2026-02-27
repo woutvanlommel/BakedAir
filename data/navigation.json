@@ -1,12 +1,12 @@
 [
     {
         "name": "Wat doen we?",
-        "url": "wout/#waarom",
+        "url": "#waarom",
         "is_cta": false
     },
     {
         "name": "Tiers",
-        "url": "wout/#collectie",
+        "url": "#collectie",
         "is_cta": false
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "name": "Contact",
-        "url": "wout/contact.php",
+        "url": "contact.php",
         "is_cta": false
     },
     {
