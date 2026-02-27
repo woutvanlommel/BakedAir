@@ -1,0 +1,41 @@
+{
+    "basic": {
+        "id": "basic",
+        "title": "Ochtend Briesje",
+        "price": 1,
+        "description": "Een verfrissend moment voor uzelf. Perfect om de dagelijkse chaos even te ontvluchten.",
+        "features": [
+            "1MB Gecertificeerde Lucht",
+            "100% Pollenvrij & Zuiver",
+            "Directe digitale verlichting"
+        ],
+        "kofi_url": "https://ko-fi.com/jouwlink/shop/basic",
+        "featured": false
+    },
+    "parijs": {
+        "id": "parijs",
+        "title": "Parijse Romantiek",
+        "price": 10,
+        "description": "De essentie van de Franse hoofdstad. Bevat vage tonen van luxe, cultuur en pure klasse.",
+        "features": [
+            "Premium Europese Atmosfeer",
+            "Gecureerde luxe-ervaring",
+            "Eigendomscertificaat"
+        ],
+        "kofi_url": "https://ko-fi.com/jouwlink/shop/parijs",
+        "featured": true
+    },
+    "elite": {
+        "id": "elite",
+        "title": "Elite Mirage",
+        "price": 50,
+        "description": "De absolute top. De lucht die enkel wordt ingeademd in de hoogste kringen.",
+        "features": [
+            "Ultra-Exclusieve Zuurstof",
+            "Luxe Digitale Verpakking",
+            "VIP Toegang tot de Cloud"
+        ],
+        "kofi_url": "https://ko-fi.com/jouwlink/shop/elite",
+        "featured": false
+    }
+}
