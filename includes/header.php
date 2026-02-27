@@ -27,15 +27,9 @@
 
     <nav class="navbar">
         <div class="container nav-flex">
-            <?php
-            if (current_page() === 'index.php') { ?>
-                <a href="<?php echo $base_url; ?>#hero" class="nav-brand">Oxy<span>Pure</span></a>
-            <?php } ?>
-
-            <?php
-            if (current_page() !== 'index.php') { ?>
-                <a href="<?php echo $base_url; ?>index.php" class="nav-brand">Oxy<span>Pure</span></a>
-            <?php } ?>
+            <a href="<?php echo (current_page() === 'index.php') ? '#hero' : $base_url . 'index.php'; ?>" class="nav-brand">
+                Oxy<span>Pure</span>
+            </a>
 
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
