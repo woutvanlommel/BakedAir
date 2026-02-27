@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Wat doen we?",
+        "url": "#waarom",
+        "is_cta": false
+    },
+    {
+        "name": "Tiers",
+        "url": "#collectie",
+        "is_cta": false
+    },
+    {
+        "name": "Reviews",
+        "url": "#ervaringen",
+        "is_cta": false
+    },
+    {
+        "name": "Contact",
+        "url": "#contact",
+        "is_cta": false
+    },
+    {
+        "name": "Claim Uw Briesje",
+        "url": "https://ko-fi.com/jouwlink",
+        "is_cta": true
+    }
+]
