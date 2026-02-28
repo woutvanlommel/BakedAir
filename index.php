@@ -5,7 +5,6 @@ $files = [
     'data/sales.json' => ['total_revenue' => 0, 'target_goal' => 1000000, 'certificates_sold' => 0, 'total_available' => 10000],
     'data/leads.json' => [],
     'data/bezitters.json' => [],
-    'data/certifications'
 ];
 
 foreach ($files as $path => $default) {

@@ -135,7 +135,7 @@ $pdf->SetTextColor(148, 163, 184);
 $pdf->Cell(0, 10, "Certificaat ID: $cert_id  |  Datum van Uitgifte: $datum", 0, 0, 'C');
 
 // Bestand opslaan
-$pdf_path = $targetDir . '/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $session_id . '.pdf';
+$pdf_path = $targetDir . '/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $session_id . '.air';
 $pdf->Output('F', $pdf_path);
 
 // 5. BEVESTIGINGSMAIL (Via PHPMailer/SMTP)
@@ -182,7 +182,7 @@ include('includes/header.php');
                 <p>Status: <span style="color: #00a8ff; font-weight: bold;">OFFICIEEL GEREGISTREERD</span></p>
                 <br>
                 <a href="<?php echo $pdf_path; ?>" download class="btn-main" style="display: inline-block; text-decoration: none;">
-                    Download Uw Certificaat (.pdf)
+                    Download Uw Certificaat (.air)
                 </a>
             </div>
 
