@@ -12,6 +12,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $session_id = $_GET['session_id'] ?? null;
+$time = time();
 
 // Veiligheidscheck
 if (!$session_id || !isset($_SESSION['klant_email'])) {
@@ -135,7 +136,7 @@ $pdf->SetTextColor(148, 163, 184);
 $pdf->Cell(0, 10, "Certificaat ID: $cert_id  |  Datum van Uitgifte: $datum", 0, 0, 'C');
 
 // Bestand opslaan
-$pdf_path = $targetDir . '/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $session_id . '.air';
+$pdf_path = $targetDir . '/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $time . '.air';
 $pdf->Output('F', $pdf_path);
 
 // 5. BEVESTIGINGSMAIL (Via PHPMailer/SMTP)
