@@ -1,86 +1,64 @@
 /* css/sections/collectie.css */
 .bg-soft {
-    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
-    position: relative;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 100px 0;
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-top: 80px;
-    align-items: stretch;
+.single-pricing-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 0 20px;
 }
 
-.price-box {
-    background: var(--white);
+.price-box.featured {
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
     padding: 60px 40px;
     border-radius: 40px;
-    box-shadow: 0 10px 40px rgba(0, 40, 100, 0.04);
-    border: 1px solid rgba(0, 168, 255, 0.05);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 2px solid #00a8ff;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 40, 100, 0.08);
     display: flex;
     flex-direction: column;
-    position: relative;
-}
-
-.price-box:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 40px 80px rgba(0, 168, 255, 0.15);
-}
-
-/* De 'Featured' kaart (Parijse Romantiek) */
-.price-box.featured {
-    border: 2px solid var(--blue);
-    transform: scale(1.05);
-    z-index: 2;
-    background: linear-gradient(180deg, #ffffff 0%, #f4fbff 100%);
-}
-
-.price-box.featured:hover {
-    transform: scale(1.08) translateY(-20px);
+    align-items: center; /* Zorgt dat alles, ook de button, in het midden staat */
+    text-align: center;
 }
 
 .popular {
     position: absolute;
     top: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--navy);
-    color: white;
-    padding: 8px 24px;
+    background: #ff4757;
+    color: #fff;
+    padding: 8px 25px;
     border-radius: 50px;
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 0 5px 15px rgba(26, 42, 58, 0.2);
+    box-shadow: 0 8px 15px rgba(255, 71, 87, 0.2);
 }
 
 .price-box h4 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin: 0 0 15px 0;
+    font-size: 2rem;
     color: var(--navy);
-    letter-spacing: -0.5px;
+    margin-bottom: 10px;
 }
 
 .price-box p {
     color: #64748b;
     font-size: 1rem;
-    line-height: 1.5;
     margin-bottom: 30px;
 }
 
 .amount {
-    font-size: 4.5rem;
-    font-weight: 800;
-    margin-bottom: 30px;
+    font-size: 5rem;
+    font-weight: 900;
     color: var(--navy);
-    letter-spacing: -3px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
 }
 
 .amount::before {
@@ -88,69 +66,43 @@
     font-size: 2rem;
     margin-top: 15px;
     margin-right: 5px;
-    font-weight: 400;
+    color: #00a8ff;
 }
 
 .features {
     list-style: none;
     padding: 0;
-    margin: 0 0 50px 0;
-    text-align: left;
-    flex-grow: 1;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
 .features li {
-    padding: 15px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #f1f5f9;
     color: #475569;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     display: flex;
-    align-items: center;
+    justify-content: start;
 }
 
 .features li::before {
     content: "✓";
-    margin-right: 15px;
-    color: var(--blue);
-    font-weight: 800;
-    font-size: 1.1rem;
+    margin-right: 12px;
+    color: #00a8ff;
+    font-weight: 900;
 }
 
-.features li:last-child {
-    border-bottom: none;
-}
-
-/* Knoppen */
-.btn-card {
-    display: block;
-    padding: 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    transition: all 0.3s ease;
-    border: 2px solid var(--blue);
-    color: var(--blue);
+/* De Knop */
+.btn-main.highlight {
+    width: 100%;
+    max-width: 300px; /* Houdt de knop elegant op desktop */
     text-align: center;
+    padding: 18px;
+    display: block;
 }
 
-.btn-card:hover {
-    background: var(--blue);
-    color: white;
-    transform: scale(1.02);
-}
-
-.btn-card.highlight {
-    background: var(--blue);
-    color: white;
-    border-color: var(--blue);
-    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.2);
-}
-
-.btn-card.highlight:hover {
-    background: var(--navy);
-    border-color: var(--navy);
-    box-shadow: 0 10px 25px rgba(26, 42, 58, 0.3);
+.limit-notice {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 20px;
 }

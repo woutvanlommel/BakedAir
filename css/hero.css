@@ -2,76 +2,115 @@
 .hero {
     padding: 180px 0 100px;
     text-align: center;
-    background: radial-gradient(circle at top, #e6f7ff 0%, #ffffff 70%);
+    background: radial-gradient(circle at top, #f0f9ff 0%, #ffffff 70%);
+    position: relative;
+    overflow: hidden;
 }
 
-.badge {
-    background: #e3f2fd;
-    color: var(--blue);
-    padding: 8px 18px;
+/* De Urgentie Badge */
+.badge.red-alert {
+    background: #fff5f5;
+    color: #e53e3e;
+    padding: 10px 20px;
     border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.75rem;
+    font-weight: 800;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(229, 62, 62, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.1);
+}
+
+.badge.red-alert::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #e53e3e;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    letter-spacing: -3px;
+    font-size: clamp(2.5rem, 8vw, 4.8rem);
+    letter-spacing: -4px;
     margin: 24px 0;
-    line-height: 1.1;
+    line-height: 1.05;
+    color: var(--navy);
 }
 
 .gradient-text {
     background: linear-gradient(90deg, #00a8ff, #0077be);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-fill-color: transparent;
+    display: block;
 }
 
 .hero-sub {
-    font-size: clamp(1.1rem, 3vw, 1.4rem);
-    color: #64748b;
-    max-width: 720px;
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    color: #475569;
+    max-width: 750px;
     margin: 0 auto 48px;
     line-height: 1.6;
+    font-weight: 400;
 }
 
 .hero-actions {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
-}
-
-.btn-main,
-.btn-secondary {
-    padding: 18px 36px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-main {
     background: var(--navy);
     color: white;
-    box-shadow: 0 10px 20px rgba(26, 42, 58, 0.15);
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 15px 30px rgba(26, 42, 58, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-main:hover {
-    transform: translateY(-3px);
-    background: var(--blue);
+    transform: translateY(-5px);
+    background: #00a8ff;
+    box-shadow: 0 20px 40px rgba(0, 168, 255, 0.3);
 }
 
 .btn-secondary {
     background: white;
     color: var(--navy);
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
     border: 1px solid #e2e8f0;
+    transition: 0.3s ease;
 }
 
 .btn-secondary:hover {
-    border-color: var(--blue);
-    background: var(--bg);
+    border-color: #00a8ff;
+    color: #00a8ff;
+    background: #f8fafc;
 }

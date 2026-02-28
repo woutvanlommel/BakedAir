@@ -1,1 +1,4 @@
 .env
+data/leads.json
+data/sales.json
+data/bezitters.json

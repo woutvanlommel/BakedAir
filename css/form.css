@@ -1,27 +1,164 @@
 /* css/form.css */
+
+/* Algemene container: Forceert alles naar het midden van de pagina */
+.order-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontaal centreren van alle kinderen */
+    text-align: center;
+}
+
+/* Header styling */
+.order-header {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.order-title {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    margin: 20px 0 10px;
+    color: var(--navy);
+}
+
+.order-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* De witte kaart waarin het formulier leeft */
+.order-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    width: 100%; /* Zorgt dat de kaart de 600px vult */
+}
+
+/* Formuliergroepen */
+.forn-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: left; /* Tekst in de inputs en labels links houden voor leesbaarheid */
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
+    margin-bottom: 10px;
+    font-weight: 700;
     color: var(--navy);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
 }
 
 .form-group input {
     width: 100%;
-    padding: 15px;
-    border-radius: 12px;
+    padding: 16px;
+    border-radius: 14px;
     border: 1px solid #e2e8f0;
     font-family: inherit;
     font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
 }
 
 .form-group input:focus {
     border-color: var(--blue);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 168, 255, 0.1);
+    background: #fff;
+}
+
+/* De samenvatting (Ticket effect) */
+.order-summary {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 30px 0;
+    border: 1px dashed #cbd5e1;
+    text-align: left;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #64748b;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.summary-row strong::before {
+    content: "✓ ";
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    font-weight: 800;
+}
+
+/* De submit knop - Geen inline styles meer nodig */
+.btn-submit-order {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background: var(--navy);
+    color: white;
+    transition:
+        transform 0.2s ease,
+        background 0.3s ease;
+}
+
+.btn-submit-order:hover {
+    transform: translateY(-3px);
+    background: var(--blue);
+}
+
+/* Extra elementen */
+.security-note {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 20px;
+}
+
+.input-hint {
+    color: #94a3b8;
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+.alert-error {
+    background: #fff5f5;
+    color: #e53e3e;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #feb2b2;
+    font-weight: 600;
+    width: 100%;
 }

@@ -1,41 +1,15 @@
 {
-    "basic": {
-        "id": "basic",
-        "title": "Ochtend Briesje",
-        "price": 1,
-        "description": "Een verfrissend moment voor uzelf. Perfect om de dagelijkse chaos even te ontvluchten.",
+    "certificaat": {
+        "id": "certificaat",
+        "title": "Officieel Certificaat van Puurheid",
+        "price": 25,
+        "description": "Uw persoonlijke claim op een stukje atmosferische perfectie. Genummerd, geverifieerd en eeuwigdurend.",
         "features": [
-            "1MB Gecertificeerde Lucht",
-            "100% Pollenvrij & Zuiver",
-            "Directe digitale verlichting"
+            "Uniek Geverifieerd Serienummer",
+            "Gepersonaliseerd PDF Eigendomsbewijs",
+            "Eeuwigdurende registratie in de Cloud",
+            "Directe bijdrage aan de 1M Mirage"
         ],
-        "kofi_url": "https://ko-fi.com/s/7a0d807b20",
-        "featured": false
-    },
-    "parijs": {
-        "id": "parijs",
-        "title": "Parijse Romantiek",
-        "price": 10,
-        "description": "De essentie van de Franse hoofdstad. Bevat vage tonen van luxe, cultuur en pure klasse.",
-        "features": [
-            "Premium Europese Atmosfeer",
-            "Gecureerde luxe-ervaring",
-            "Eigendomscertificaat"
-        ],
-        "kofi_url": "https://ko-fi.com/s/b8e47b5189",
         "featured": true
-    },
-    "elite": {
-        "id": "elite",
-        "title": "Elite Mirage",
-        "price": 50,
-        "description": "De absolute top. De lucht die enkel wordt ingeademd in de hoogste kringen.",
-        "features": [
-            "Ultra-Exclusieve Zuurstof",
-            "Luxe Digitale Verpakking",
-            "VIP Toegang tot de Cloud"
-        ],
-        "kofi_url": "https://ko-fi.com/s/248532d1a7",
-        "featured": false
     }
 }

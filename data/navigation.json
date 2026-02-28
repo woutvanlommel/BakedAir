@@ -1,11 +1,11 @@
 [
     {
-        "name": "Wat doen we?",
+        "name": "De Noodzaak",
         "url": "#waarom",
         "is_cta": false
     },
     {
-        "name": "Tiers",
+        "name": "BakedAir",
         "url": "#collectie",
         "is_cta": false
     },
@@ -20,8 +20,8 @@
         "is_cta": false
     },
     {
-        "name": "Claim Uw Briesje",
-        "url": "https://ko-fi.com/jouwlink",
+        "name": "Claim Certificaat",
+        "url": "bestellen.php?pakket=certificaat",
         "is_cta": true
     }
 ]
