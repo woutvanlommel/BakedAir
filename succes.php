@@ -19,6 +19,19 @@ if (!$session_id || !isset($_SESSION['klant_email'])) {
     exit();
 }
 
+$targetDir = 'data/certifications';
+
+// Controleer of de map al bestaat
+if (!is_dir($targetDir)) {
+    // Maak de map aan met de juiste rechten (0755 is standaard voor mappen)
+    // 'true' zorgt ervoor dat ook bovenliggende mappen worden aangemaakt indien nodig
+    if (mkdir($targetDir, 0755, true)) {
+        echo "De map '$targetDir' is succesvol aangemaakt.";
+    } else {
+        echo "Fout: Kon de map niet aanmaken. Check je schrijfrechten.";
+    }
+}
+
 // 2. JOUW VERTROUWDE STRIPE CHECK (via cURL)
 $stripe_secret_key = $_ENV['STRIPE_SECRET_KEY'];
 $ch = curl_init();
@@ -61,6 +74,7 @@ if (!in_array($klant_email, $bezitters)) {
 
 // 4. PDF GENEREREN (Luxe Editie)
 $pdf = new FPDF('L', 'mm', 'A4');
+$pdf->SetAutoPageBreak(false);
 $pdf->AddPage();
 
 // Achtergrondkleur (heel licht grijs/blauw voor diepte)
@@ -115,13 +129,13 @@ $pdf->MultiCell(0, 8, "Voldoet aan de atmosferische standaarden van OxyPure.\nEi
 //$pdf->Cell(40, 40, 'OFFICIEEL GEVALIDEERD', 1, 0, 'C'); // Simpele box als 'stempel'
 
 // Footer met ID en Datum
-$pdf->SetY(140);
+$pdf->SetY(-30); // Plaats de cursor op 25mm van de onderkant
 $pdf->SetFont('Arial', '', 10);
 $pdf->SetTextColor(148, 163, 184);
 $pdf->Cell(0, 10, "Certificaat ID: $cert_id  |  Datum van Uitgifte: $datum", 0, 0, 'C');
 
 // Bestand opslaan
-$pdf_path = 'data/certifications/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $session_id . '.pdf';
+$pdf_path = $targetDir . '/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $session_id . '.pdf';
 $pdf->Output('F', $pdf_path);
 
 // 5. BEVESTIGINGSMAIL (Via PHPMailer/SMTP)
