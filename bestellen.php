@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // 1. Data ophalen uit tiers.json
 $jsonData = file_get_contents('data/tiers.json');
 $tiers = json_decode($jsonData, true);

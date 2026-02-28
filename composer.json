@@ -1,0 +1,19 @@
+{
+    "name": "woutvanlommel/baked-air",
+    "autoload": {
+        "psr-4": {
+            "Woutvanlommel\\BakedAir\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "woutvanlommel",
+            "email": "woutvanlommel@icloud.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^7.0",
+        "setasign/fpdf": "^1.8",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

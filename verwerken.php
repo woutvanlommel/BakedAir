@@ -1,13 +1,24 @@
 <?php
 session_start();
-require_once('includes/env_loader.php'); // Zorg dat dit pad klopt
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gekozen_pakket'])) {
     $pakket = $_SESSION['gekozen_pakket'];
-    $_SESSION['klant_naam'] = htmlspecialchars($_POST['naam']);
-    $_SESSION['klant_email'] = htmlspecialchars($_POST['email']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $naam = htmlspecialchars($_POST['naam']);
 
-    // Stripe configuratie uit .env
+    // --- NIEUW: Check op dubbele bestelling ---
+    $bezitters = json_decode(file_get_contents('data/bezitters.json'), true) ?: [];
+    if (in_array($email, $bezitters)) {
+        header('Location: bestellen.php?error=already_claimed');
+        exit();
+    }
+
+    $_SESSION['klant_naam'] = $naam;
+    $_SESSION['klant_email'] = $email;
+
     $stripe_secret_key = $_ENV['STRIPE_SECRET_KEY'];
     $base_url = $_ENV['BASE_URL'];
 
