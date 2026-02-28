@@ -1,4 +1,4 @@
 .env
-data/leads.json
-data/sales.json
-data/bezitters.json
+leads.json
+sales.json
+bezitters.json
