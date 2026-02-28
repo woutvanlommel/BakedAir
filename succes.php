@@ -94,10 +94,13 @@ $pdf->Ln(15);
 $pdf->Cell(0, 10, 'Hiermee wordt officieel en onherroepelijk vastgelegd dat', 0, 1, 'C');
 
 // De Naam van de Eigenaar (Groot en opvallend)
-$pdf->SetFont('Times', 'BI', 42); // Times Italic voor een klassiek 'diploma' gevoel
+$pdf->SetFont('Times', 'BI', 42);
 $pdf->SetTextColor(0, 168, 255);
 $pdf->Ln(10);
-$pdf->Cell(0, 25, htmlspecialchars($klant_naam), 0, 1, 'C');
+
+// Converteer UTF-8 naar ISO-8859-1 voor correcte weergave van accenten
+$geconverteerde_naam = iconv('UTF-8', 'windows-1252', $klant_naam);
+$pdf->Cell(0, 25, $geconverteerde_naam, 0, 1, 'C');
 
 // Beschrijving
 $pdf->SetFont('Arial', '', 12);
@@ -112,10 +115,10 @@ $pdf->MultiCell(0, 8, "Voldoet aan de atmosferische standaarden van OxyPure.\nEi
 //$pdf->Cell(40, 40, 'OFFICIEEL GEVALIDEERD', 1, 0, 'C'); // Simpele box als 'stempel'
 
 // Footer met ID en Datum
-$pdf->SetY(180);
+$pdf->SetY(140);
 $pdf->SetFont('Arial', '', 10);
 $pdf->SetTextColor(148, 163, 184);
-$pdf->Cell(0, 10, "Certificaat ID: $cert_id  |  Datum van Uitgifte: $datum  |  Locatie: Hasselt, BE", 0, 0, 'C');
+$pdf->Cell(0, 10, "Certificaat ID: $cert_id  |  Datum van Uitgifte: $datum", 0, 0, 'C');
 
 // Bestand opslaan
 $pdf_path = 'data/certifications/certificaat_' . str_replace(' ', '_', $klant_naam) . '_' . $session_id . '.pdf';
