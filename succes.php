@@ -10,6 +10,7 @@ $dotenv->load();
 // Namespaces importeren
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
 $session_id = $_GET['session_id'] ?? null;
 $time = time();
@@ -143,14 +144,14 @@ $pdf->Output('F', $pdf_path);
 $mail = new PHPMailer(true);
 try {
     $mail->isSMTP();
-    $mail->Host       = $_ENV['SMTP_HOST'];
+    $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = $_ENV['SMTP_USER'];
-    $mail->Password   = $_ENV['SMTP_PASS'];
+    $mail->Username   = 'woutvanlommel7@gmail.com';
+    $mail->Password   = $_ENV['BakedAirMailer'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = $_ENV['SMTP_PORT'] ?? 587;
+    $mail->Port       = 587;
 
-    $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], 'OxyPure');
+    $mail->setFrom('woutvanlommel7@gmail.com', 'OxyPure');
     $mail->addAddress($klant_email, $klant_naam);
     $mail->addAttachment($pdf_path, 'Uw_OxyPure_Certificaat.pdf');
 
