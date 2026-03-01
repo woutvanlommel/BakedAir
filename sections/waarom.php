@@ -1,31 +1,45 @@
-<section id="waarom" class="section">
-    <div class="container grid-split">
-        <div class="info-content">
-            <span class="label">Wellness 2.0</span>
-            <h2>Uw ademhaling verdient een upgrade.</h2>
-            <p>OxyPure is ontstaan vanuit een simpel verlangen: de meest pure lucht ter wereld toegankelijk maken voor iedereen met een internetverbinding.</p>
-            <p>Onze unieke methode vangt de sfeer op van de meest rustgevende locaties en zet deze om in een downloadbaar formaat. Het is de ultieme vorm van mindfulness voor de moderne mens.</p>
+<?php
+$salesData = json_decode(file_get_contents('data/sales.json'), true);
+?>
 
-            <ul class="feature-list">
-                <li><span class="check-icon">✓</span> <span><strong>Gegarandeerd Zuiver</strong> - Geen fijnstof, geen geurtjes, alleen pure rust.</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Ambachtelijk Gecureerd</strong> - Elke ml is met zorg geselecteerd voor uw genot.</span></li>
-                <li><span class="check-icon">✓</span> <span><span><strong>Status Symbool</strong> - Laat zien dat u alleen genoegen neemt met het beste.</span></li>
+<section id="waarom" class="section asset-grading">
+    <div class="container grid-main">
+        <div class="info-content">
+            <span class="label">SYSTEEM STATUS: KRITIEK</span>
+            <h2>Lucht is te kostbaar om <span class="gradient-text">gratis</span> te laten.</h2>
+            <p class="lead">Waarom zou u vertrouwen op de publieke atmosfeer als u een privaat, gecertificeerd segment kunt bezitten? Gratis lucht is een marktinefficiëntie die we nu corrigeren.</p>
+            <p>OxyPure digitaliseert schaarste. Door uw ademhaling te koppelen aan een uniek .air bestand, verzekert u uw plek in de post-fysieke economie.</p>
+
+            <ul class="feature-list-tech">
+                <li><span class="tech-dot"></span> <span><strong>Gevalideerd Eigendom</strong> - Stop met ademen van andermans restproduct; claim uw eigen ID.</span></li>
+                <li><span class="tech-dot"></span> <span><strong>Inflatiebestendig</strong> - In tegenstelling tot de euro, maken wij geen nieuwe lucht bij.</span></li>
+                <li><span class="tech-dot"></span> <span><strong>Digitale Sovereigniteit</strong> - Uw longinhoud, uw blockchain-verificatie, uw winst.</span></li>
             </ul>
         </div>
 
-        <div class="info-stats">
-            <div class="stat-card">
-                <h3>99.9%</h3>
-                <p>Gegarandeerde Puurheid</p>
+        <div class="info-visual">
+            <div class="data-box">
+                <div class="header-status">
+                    <span class="pulse"></span> LIVE MARKET DATA
+                </div>
+                <div class="data-row">
+                    <span>OXY/INDEX</span>
+                    <span class="up">+24.8%</span>
+                </div>
+                <div class="data-row">
+                    <span>Supply Cap</span>
+                    <span>10.000 ATMOS</span>
+                </div>
+                <div class="data-row">
+                    <span>In Omloop</span>
+                    <span><?php echo $salesData['certificates_sold']; ?></span>
+                </div>
+                <div class="data-row highlight">
+                    <span>Marktsentiment</span>
+                    <span>HYPER-BULLISH</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <h3>100%</h3>
-                <p>Stress-Vrij Formaat</p>
-            </div>
-            <div class="stat-card" style="border-left-color: var(--navy);">
-                <h3>&infin;</h3>
-                <p>Grenzeloze Ervaring</p>
-            </div>
+            <p class="disclaimer">* Resultaten uit het verleden bieden geen garantie voor toekomstige ademhaling.</p>
         </div>
     </div>
 </section>
