@@ -114,3 +114,41 @@
     color: #00a8ff;
     background: #f8fafc;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 12px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-main,
+    .btn-secondary {
+        padding: 14px 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 10px 40px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -66,3 +66,39 @@
 .up {
     color: #10b981;
 } /* Succes groen */
+
+@media (max-width: 768px) {
+    .asset-grading {
+        padding: 18px 12px;
+    }
+
+    .label {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+
+    .feature-list-tech li {
+        gap: 12px;
+        font-size: 0.92rem;
+    }
+
+    .data-box {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .data-row {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .asset-grading {
+        padding: 12px 10px;
+    }
+
+    .data-box {
+        padding: 14px;
+    }
+}

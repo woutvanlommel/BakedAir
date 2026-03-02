@@ -40,7 +40,7 @@
 }
 
 /* Formuliergroepen */
-.forn-info {
+.form-info {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -161,4 +161,44 @@
     border: 1px solid #feb2b2;
     font-weight: 600;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .order-form-container {
+        padding: 36px 12px;
+        max-width: 100%;
+    }
+
+    .order-title {
+        font-size: 2rem;
+    }
+
+    .order-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .form-group input {
+        padding: 12px;
+    }
+
+    .order-summary {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .btn-submit-order {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-title {
+        font-size: 1.6rem;
+    }
+
+    .order-subtitle {
+        font-size: 0.95rem;
+    }
 }

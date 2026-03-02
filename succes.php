@@ -173,18 +173,18 @@ unset($_SESSION['klant_email']);
 include('includes/header.php');
 ?>
 
-<section class="section text-center" style="padding-top: 150px;">
-    <div class="container" style="max-width: 600px;">
-        <div class="success-card" style="background: white; padding: 50px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05);">
+<section class="section text-center success-section">
+    <div class="container success-container">
+        <div class="success-card">
             <h1 class="gradient-text">Betaling Geslaagd!</h1>
             <p>Welkom bij de elite, <strong><?php echo htmlspecialchars($klant_naam); ?></strong>.</p>
 
-            <div class="cert-box" style="border: 2px dashed #00a8ff; padding: 30px; margin: 30px 0; border-radius: 20px;">
+            <div class="cert-box">
                 <h3>CERTIFICAAT VAN PUURHEID</h3>
                 <p>Status: <span style="color: #00a8ff; font-weight: bold;">OFFICIEEL GEREGISTREERD</span></p>
                 <br>
-                <a href="<?php echo $pdf_path; ?>" download class="btn-main" style="display: inline-block; text-decoration: none;">
-                    Download Uw Certificaat (.air)
+                <a href="<?php echo $pdf_path; ?>" download class="btn-main">
+                    Download Uw Certificaat
                 </a>
             </div>
 

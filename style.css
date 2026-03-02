@@ -306,3 +306,202 @@ body {
 .footer-legal p {
     margin: 8px 0;
 }
+
+/* --- Mobile Responsive Overrides --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-brand {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 56px 8px;
+    }
+
+    .single-pricing-wrapper {
+        padding: 0 12px;
+        margin-top: 40px;
+    }
+
+    .price-box.featured {
+        padding: 40px 24px;
+        border-radius: 24px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .amount {
+        font-size: 3rem;
+    }
+
+    .features li {
+        font-size: 0.95rem;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonial {
+        padding: 36px 24px;
+        border-radius: 20px;
+    }
+
+    .testimonial p {
+        font-size: 1.15rem;
+    }
+
+    .order-form-container {
+        padding: 40px 12px;
+        max-width: 100%;
+    }
+
+    .order-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .order-title {
+        font-size: 2rem;
+    }
+
+    .btn-main,
+    .btn-secondary,
+    .btn-submit-order,
+    .btn-main.highlight {
+        width: 100%;
+        padding: 14px 18px;
+        max-width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .badge.red-alert {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 150px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .amount {
+        font-size: 2.4rem;
+    }
+
+    .price-box.featured {
+        padding: 28px 18px;
+        border-radius: 16px;
+    }
+
+    .features li::before {
+        margin-right: 8px;
+    }
+
+    .form-group input {
+        padding: 12px;
+    }
+}
+
+/* Success page specific styles */
+.success-section {
+    padding-top: 150px;
+}
+
+.success-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.cert-box {
+    border: 2px dashed var(--blue);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .success-section {
+        padding-top: 60px;
+    }
+
+    .success-card {
+        padding: 28px;
+        border-radius: 18px;
+    }
+
+    .cert-box {
+        padding: 18px;
+        margin: 18px 0;
+    }
+
+    .success-container {
+        padding: 0 16px;
+    }
+
+    .btn-main {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-section {
+        padding-top: 40px;
+    }
+
+    .success-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .cert-box {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    .gradient-text {
+        font-size: 1.4rem;
+    }
+}
