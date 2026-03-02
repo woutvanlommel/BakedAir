@@ -239,7 +239,7 @@ body {
     }
 
     /* Activeer menu via checkbox */
-    #menu-toggle:checked ~ .nav-flex .nav-links {
+    #menu-toggle:checked ~ .nav-links {
         height: calc(100vh - var(--nav-height));
         padding-top: 20px;
     }

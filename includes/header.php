@@ -32,7 +32,7 @@
             </a>
 
             <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <label for="menu-toggle" class="menu-icon" aria-label="Menu openen/sluiten" aria-expanded="false">&#9776;</label>
 
             <ul class="nav-links">
                 <?php foreach ($navItems as $item): ?>
@@ -72,3 +72,24 @@
             </ul>
         </div>
     </nav>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const icon = document.querySelector('.menu-icon');
+
+        // Wissel hamburger ↔ kruisje bij open/dicht
+        toggle.addEventListener('change', () => {
+            const isOpen = toggle.checked;
+            icon.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+            icon.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Sluit menu automatisch als op een nav-link geklikt wordt
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.checked = false;
+                icon.innerHTML = '&#9776;';
+                icon.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
