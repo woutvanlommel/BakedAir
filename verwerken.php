@@ -33,6 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gekozen_pakket']))
         'customer_email' => $_SESSION['klant_email'],
         'success_url' => $base_url . 'succes.php?session_id={CHECKOUT_SESSION_ID}',
         'cancel_url' => $base_url . 'bestellen.php?pakket=' . $pakket['id'],
+
+        'payment_method_types[0]' => 'card',
+        'payment_method_types[1]' => 'ideal',
+        'payment_method_types[2]' => 'bancontact',
+
+
         'line_items[0][price_data][currency]' => 'eur',
         'line_items[0][price_data][product_data][name]' => 'OxyPure: ' . $pakket['title'],
         'line_items[0][price_data][unit_amount]' => ($pakket['price'] * 100), // Stripe werkt in centen
@@ -43,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gekozen_pakket']))
     curl_setopt($ch, CURLOPT_USERPWD, $stripe_secret_key . ':');
 
     $result = json_decode(curl_exec($ch), true);
-    curl_close($ch);
+    // curl_close($ch);
 
     if (isset($result['url'])) {
         header("Location: " . $result['url']); // Ga naar de Stripe betaalpagina
