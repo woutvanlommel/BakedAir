@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gekozen_pakket']))
         'cancel_url' => $base_url . 'bestellen.php?pakket=' . $pakket['id'],
 
         'payment_method_types[0]' => 'card',
-        'payment_method_types[2]' => 'bancontact',
+        'payment_method_types[1]' => 'bancontact',
 
 
         'line_items[0][price_data][currency]' => 'eur',
