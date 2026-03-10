@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gekozen_pakket']))
         'success_url' => $base_url . 'succes.php?session_id={CHECKOUT_SESSION_ID}',
         'cancel_url' => $base_url . 'bestellen.php?pakket=' . $pakket['id'],
 
-        'payment_method_types[0]' => 'card',
-        'payment_method_types[1]' => 'bancontact',
+        // 'payment_method_types[0]' => 'card',
+        // 'payment_method_types[1]' => 'bancontact',
 
 
         'line_items[0][price_data][currency]' => 'eur',
